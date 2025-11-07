@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  cursor: none;
+}
+
+html, body {
+  scroll-behavior: auto;
+  overflow-x: hidden;
+}
+
+body {
+  background: #000000;
+  font-family: 'Crimson Pro', Georgia, serif;
+  color: #f0e6ff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animated gradient background */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+  background: linear-gradient(
+    135deg,
+    #1a0828 0%,
+    #5606FF 20%,
+    #e421fe 40%,
+    #4B0082 60%,
+    #e421fe 80%,
+    #1a0828 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Custom glowing cursor */
+.cursor-glow {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(228, 33, 254, 0.8), rgba(86, 6, 255, 0.4), transparent);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+  mix-blend-mode: screen;
+  filter: blur(8px);
+}
+
+.cursor-glow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  filter: blur(0);
+}
+
+/* Smooth text glow */
+.text-glow {
+  text-shadow: 0 0 20px rgba(230, 230, 250, 0.4), 0 0 40px rgba(228, 33, 254, 0.2);
+}
+
+/* Floating hearts */
+.heart-icon {
+  position: absolute;
+  font-size: 20px;
+  opacity: 0.6;
+  pointer-events: none;
+  filter: drop-shadow(0 0 8px rgba(228, 33, 254, 0.6));
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(50px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
