@@ -1,4 +1,4 @@
-# Love Letter — A Dream in Violet
+# HeartScript- A Heartfelt Message
 
 
 ## ✨ Features
@@ -46,3 +46,4 @@ Open **http://localhost:5173** after running `npm run dev` and scroll to experie
 
 
 #
+
