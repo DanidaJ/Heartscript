@@ -5,7 +5,7 @@ import { getGsap } from './lib/gsapSetup';
 
 export default function App() {
   const sentences = useMemo(() => [
-    "Dear Princess of Samagi Mawatha",
+    "Dear Princess of Suhanda Mawatha",
     "Dear Dinithi, so clever and bright",
     "Shining light of my darkest times",
     "Best thing ever happened in my life",
